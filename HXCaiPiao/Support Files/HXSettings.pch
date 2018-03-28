@@ -1,0 +1,44 @@
+//
+//  HXSettings.pch
+//  HXCaiPiao
+//
+//  Created by NSScorpio on 27/03/2018.
+//  Copyright © 2018 NSScorpio. All rights reserved.
+//
+
+#ifndef HXSettings_pch
+#define HXSettings_pch
+
+#pragma mark - Color
+// 十六进制颜色
+#define Color_From_Hex(hexValue) [UIColor \
+colorWithRed:((float)((hexValue & 0xFF0000) >> 16))/255.0 \
+green:((float)((hexValue & 0xFF00) >> 8))/255.0 \
+blue:((float)(hexValue & 0xFF))/255.0 alpha:1.0]
+
+#define Color_Main Color_From_Hex(0xfc6009)  // 主色
+#define Color_BG   Color_From_Hex(0xf8f8f8)  // 视图背景色
+
+#define Color_RGB(r,g,b)    [UIColor colorWithRed:r/255.0 green:g/255.0 blue:b/255.0 alpha:1.0f]
+#define Color_RGBA(r,g,b,a) [UIColor colorWithRed:r/255.0 green:g/255.0 blue:b/255.0 alpha:a]
+
+#pragma mark - Common
+#define kScreen_Width   [[UIScreen mainScreen] bounds].size.width
+#define kScreen_Height  [[UIScreen mainScreen] bounds].size.height
+
+#pragma mark - 其他
+// log
+#ifdef DEBUG
+#define HXLog(fmt, ...)  NSLog((@"[函数名:%s]" "[行号:%d] " fmt), __FUNCTION__, __LINE__, ##__VA_ARGS__);
+#else
+#define HXLog(...)
+#endif
+
+#define HXWS(weakself)  __weak __typeof(&*self)weakself = self;
+
+#define isIphoneX     (kScreen_Height == 812.f && kScreen_Width == 375.f)
+
+#define kCommon_Margin        10.f
+#define kNavi_Height          (isIphoneX ? 88.f : 64.f)
+
+#endif /* HXSettings_pch */

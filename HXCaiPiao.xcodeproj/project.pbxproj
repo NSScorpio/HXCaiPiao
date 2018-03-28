@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		49D2822E2068DE7B0020DE21 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 49D2822D2068DE7B0020DE21 /* ViewController.m */; };
 		49D282432068DE7B0020DE21 /* HXCaiPiaoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 49D282422068DE7B0020DE21 /* HXCaiPiaoTests.m */; };
 		49D2824E2068DE7B0020DE21 /* HXCaiPiaoUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 49D2824D2068DE7B0020DE21 /* HXCaiPiaoUITests.m */; };
 		49D282632068DF000020DE21 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 49D2825D2068DF000020DE21 /* AppDelegate.m */; };
@@ -15,6 +14,13 @@
 		49D282652068DF000020DE21 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 49D282602068DF000020DE21 /* Assets.xcassets */; };
 		49D282672068DF000020DE21 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 49D282622068DF000020DE21 /* Main.storyboard */; };
 		49D282692068DF090020DE21 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 49D282682068DF090020DE21 /* main.m */; };
+		49DDC283206A219F00CE9E5C /* HXBaseView.m in Sources */ = {isa = PBXBuildFile; fileRef = 49DDC282206A219F00CE9E5C /* HXBaseView.m */; };
+		49DDC286206A226E00CE9E5C /* HXBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 49DDC285206A226E00CE9E5C /* HXBaseViewController.m */; };
+		49DDC289206A22C300CE9E5C /* HXBaseNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 49DDC288206A22C300CE9E5C /* HXBaseNavigationController.m */; };
+		49DDC28C206A230500CE9E5C /* HXBaseTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 49DDC28B206A230500CE9E5C /* HXBaseTabBarController.m */; };
+		49DDC290206A346300CE9E5C /* HXHomePageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 49DDC28F206A346300CE9E5C /* HXHomePageViewController.m */; };
+		49DDC296206A364800CE9E5C /* HXHeadlineNewsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 49DDC295206A364800CE9E5C /* HXHeadlineNewsViewController.m */; };
+		49DDC299206A365E00CE9E5C /* HXUserViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 49DDC298206A365E00CE9E5C /* HXUserViewController.m */; };
 		7397A9CA5A00937125F2B891 /* libPods-HXCaiPiao.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 08BA6DE6EF6ACA87548A33AA /* libPods-HXCaiPiao.a */; };
 /* End PBXBuildFile section */
 
@@ -39,8 +45,6 @@
 		08BA6DE6EF6ACA87548A33AA /* libPods-HXCaiPiao.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-HXCaiPiao.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1239318151F2CF66E39B4F4F /* Pods-HXCaiPiao.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HXCaiPiao.release.xcconfig"; path = "Pods/Target Support Files/Pods-HXCaiPiao/Pods-HXCaiPiao.release.xcconfig"; sourceTree = "<group>"; };
 		49D282262068DE7B0020DE21 /* HXCaiPiao.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HXCaiPiao.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		49D2822C2068DE7B0020DE21 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		49D2822D2068DE7B0020DE21 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		49D2823E2068DE7B0020DE21 /* HXCaiPiaoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HXCaiPiaoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		49D282422068DE7B0020DE21 /* HXCaiPiaoTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HXCaiPiaoTests.m; sourceTree = "<group>"; };
 		49D282442068DE7B0020DE21 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -54,6 +58,21 @@
 		49D282612068DF000020DE21 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		49D282622068DF000020DE21 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		49D282682068DF090020DE21 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		49DDC281206A219F00CE9E5C /* HXBaseView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HXBaseView.h; sourceTree = "<group>"; };
+		49DDC282206A219F00CE9E5C /* HXBaseView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HXBaseView.m; sourceTree = "<group>"; };
+		49DDC284206A226E00CE9E5C /* HXBaseViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HXBaseViewController.h; sourceTree = "<group>"; };
+		49DDC285206A226E00CE9E5C /* HXBaseViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HXBaseViewController.m; sourceTree = "<group>"; };
+		49DDC287206A22C300CE9E5C /* HXBaseNavigationController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HXBaseNavigationController.h; sourceTree = "<group>"; };
+		49DDC288206A22C300CE9E5C /* HXBaseNavigationController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HXBaseNavigationController.m; sourceTree = "<group>"; };
+		49DDC28A206A230500CE9E5C /* HXBaseTabBarController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HXBaseTabBarController.h; sourceTree = "<group>"; };
+		49DDC28B206A230500CE9E5C /* HXBaseTabBarController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HXBaseTabBarController.m; sourceTree = "<group>"; };
+		49DDC28D206A29E500CE9E5C /* HXSettings.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HXSettings.pch; sourceTree = "<group>"; };
+		49DDC28E206A346300CE9E5C /* HXHomePageViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HXHomePageViewController.h; sourceTree = "<group>"; };
+		49DDC28F206A346300CE9E5C /* HXHomePageViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HXHomePageViewController.m; sourceTree = "<group>"; };
+		49DDC294206A364800CE9E5C /* HXHeadlineNewsViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HXHeadlineNewsViewController.h; sourceTree = "<group>"; };
+		49DDC295206A364800CE9E5C /* HXHeadlineNewsViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HXHeadlineNewsViewController.m; sourceTree = "<group>"; };
+		49DDC297206A365E00CE9E5C /* HXUserViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HXUserViewController.h; sourceTree = "<group>"; };
+		49DDC298206A365E00CE9E5C /* HXUserViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HXUserViewController.m; sourceTree = "<group>"; };
 		F977E0D9E6A855AB5125CD8F /* Pods-HXCaiPiao.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HXCaiPiao.debug.xcconfig"; path = "Pods/Target Support Files/Pods-HXCaiPiao/Pods-HXCaiPiao.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -86,15 +105,29 @@
 		493127972069E57B0012A992 /* Tabbar */ = {
 			isa = PBXGroup;
 			children = (
+				49DDC28E206A346300CE9E5C /* HXHomePageViewController.h */,
+				49DDC28F206A346300CE9E5C /* HXHomePageViewController.m */,
+				49DDC294206A364800CE9E5C /* HXHeadlineNewsViewController.h */,
+				49DDC295206A364800CE9E5C /* HXHeadlineNewsViewController.m */,
+				49DDC297206A365E00CE9E5C /* HXUserViewController.h */,
+				49DDC298206A365E00CE9E5C /* HXUserViewController.m */,
 			);
 			path = Tabbar;
 			sourceTree = "<group>";
 		};
-		493127982069E6830012A992 /* New Group */ = {
+		493127982069E6830012A992 /* BaseClasses */ = {
 			isa = PBXGroup;
 			children = (
+				49DDC281206A219F00CE9E5C /* HXBaseView.h */,
+				49DDC282206A219F00CE9E5C /* HXBaseView.m */,
+				49DDC284206A226E00CE9E5C /* HXBaseViewController.h */,
+				49DDC285206A226E00CE9E5C /* HXBaseViewController.m */,
+				49DDC287206A22C300CE9E5C /* HXBaseNavigationController.h */,
+				49DDC288206A22C300CE9E5C /* HXBaseNavigationController.m */,
+				49DDC28A206A230500CE9E5C /* HXBaseTabBarController.h */,
+				49DDC28B206A230500CE9E5C /* HXBaseTabBarController.m */,
 			);
-			path = "New Group";
+			path = BaseClasses;
 			sourceTree = "<group>";
 		};
 		49D2821D2068DE7B0020DE21 = {
@@ -122,12 +155,10 @@
 		49D282282068DE7B0020DE21 /* HXCaiPiao */ = {
 			isa = PBXGroup;
 			children = (
-				493127982069E6830012A992 /* New Group */,
+				493127982069E6830012A992 /* BaseClasses */,
 				493127972069E57B0012A992 /* Tabbar */,
 				49D2825C2068DE9B0020DE21 /* APP */,
 				49D2825B2068DE8D0020DE21 /* Support Files */,
-				49D2822C2068DE7B0020DE21 /* ViewController.h */,
-				49D2822D2068DE7B0020DE21 /* ViewController.m */,
 			);
 			path = HXCaiPiao;
 			sourceTree = "<group>";
@@ -154,6 +185,7 @@
 			isa = PBXGroup;
 			children = (
 				49D282682068DF090020DE21 /* main.m */,
+				49DDC28D206A29E500CE9E5C /* HXSettings.pch */,
 			);
 			path = "Support Files";
 			sourceTree = "<group>";
@@ -381,9 +413,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				49DDC289206A22C300CE9E5C /* HXBaseNavigationController.m in Sources */,
+				49DDC28C206A230500CE9E5C /* HXBaseTabBarController.m in Sources */,
+				49DDC299206A365E00CE9E5C /* HXUserViewController.m in Sources */,
+				49DDC286206A226E00CE9E5C /* HXBaseViewController.m in Sources */,
 				49D282632068DF000020DE21 /* AppDelegate.m in Sources */,
+				49DDC283206A219F00CE9E5C /* HXBaseView.m in Sources */,
+				49DDC290206A346300CE9E5C /* HXHomePageViewController.m in Sources */,
 				49D282692068DF090020DE21 /* main.m in Sources */,
-				49D2822E2068DE7B0020DE21 /* ViewController.m in Sources */,
+				49DDC296206A364800CE9E5C /* HXHeadlineNewsViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -530,6 +568,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 84AAXSQPJW;
+				GCC_PREFIX_HEADER = "HXCaiPiao/Support Files/HXSettings.pch";
 				INFOPLIST_FILE = "$(SRCROOT)/HXCaiPiao/APP/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -546,6 +585,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 84AAXSQPJW;
+				GCC_PREFIX_HEADER = "HXCaiPiao/Support Files/HXSettings.pch";
 				INFOPLIST_FILE = "$(SRCROOT)/HXCaiPiao/APP/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
