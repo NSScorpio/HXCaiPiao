@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		492A3E84206B44E800A8B0ED /* HXNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 492A3E83206B44E800A8B0ED /* HXNavigationController.m */; };
+		492A3E87206B455300A8B0ED /* HXTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 492A3E86206B455300A8B0ED /* HXTabBarController.m */; };
+		495C8DB0206CC223006F5DD5 /* HXUserHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 495C8DAC206CC223006F5DD5 /* HXUserHeaderView.m */; };
+		495C8DB2206CC223006F5DD5 /* HXUserView.m in Sources */ = {isa = PBXBuildFile; fileRef = 495C8DAE206CC223006F5DD5 /* HXUserView.m */; };
+		495C8DB5206CD377006F5DD5 /* HXUserOptionView.m in Sources */ = {isa = PBXBuildFile; fileRef = 495C8DB4206CD377006F5DD5 /* HXUserOptionView.m */; };
 		49D282432068DE7B0020DE21 /* HXCaiPiaoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 49D282422068DE7B0020DE21 /* HXCaiPiaoTests.m */; };
 		49D2824E2068DE7B0020DE21 /* HXCaiPiaoUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 49D2824D2068DE7B0020DE21 /* HXCaiPiaoUITests.m */; };
 		49D282632068DF000020DE21 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 49D2825D2068DF000020DE21 /* AppDelegate.m */; };
@@ -16,8 +21,6 @@
 		49D282692068DF090020DE21 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 49D282682068DF090020DE21 /* main.m */; };
 		49DDC283206A219F00CE9E5C /* HXBaseView.m in Sources */ = {isa = PBXBuildFile; fileRef = 49DDC282206A219F00CE9E5C /* HXBaseView.m */; };
 		49DDC286206A226E00CE9E5C /* HXBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 49DDC285206A226E00CE9E5C /* HXBaseViewController.m */; };
-		49DDC289206A22C300CE9E5C /* HXBaseNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 49DDC288206A22C300CE9E5C /* HXBaseNavigationController.m */; };
-		49DDC28C206A230500CE9E5C /* HXBaseTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 49DDC28B206A230500CE9E5C /* HXBaseTabBarController.m */; };
 		49DDC290206A346300CE9E5C /* HXHomePageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 49DDC28F206A346300CE9E5C /* HXHomePageViewController.m */; };
 		49DDC296206A364800CE9E5C /* HXHeadlineNewsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 49DDC295206A364800CE9E5C /* HXHeadlineNewsViewController.m */; };
 		49DDC299206A365E00CE9E5C /* HXUserViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 49DDC298206A365E00CE9E5C /* HXUserViewController.m */; };
@@ -44,6 +47,16 @@
 /* Begin PBXFileReference section */
 		08BA6DE6EF6ACA87548A33AA /* libPods-HXCaiPiao.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-HXCaiPiao.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1239318151F2CF66E39B4F4F /* Pods-HXCaiPiao.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HXCaiPiao.release.xcconfig"; path = "Pods/Target Support Files/Pods-HXCaiPiao/Pods-HXCaiPiao.release.xcconfig"; sourceTree = "<group>"; };
+		492A3E82206B44E800A8B0ED /* HXNavigationController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HXNavigationController.h; sourceTree = "<group>"; };
+		492A3E83206B44E800A8B0ED /* HXNavigationController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HXNavigationController.m; sourceTree = "<group>"; };
+		492A3E85206B455300A8B0ED /* HXTabBarController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HXTabBarController.h; sourceTree = "<group>"; };
+		492A3E86206B455300A8B0ED /* HXTabBarController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HXTabBarController.m; sourceTree = "<group>"; };
+		495C8DAA206CC223006F5DD5 /* HXUserHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HXUserHeaderView.h; sourceTree = "<group>"; };
+		495C8DAC206CC223006F5DD5 /* HXUserHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HXUserHeaderView.m; sourceTree = "<group>"; };
+		495C8DAE206CC223006F5DD5 /* HXUserView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HXUserView.m; sourceTree = "<group>"; };
+		495C8DAF206CC223006F5DD5 /* HXUserView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HXUserView.h; sourceTree = "<group>"; };
+		495C8DB3206CD377006F5DD5 /* HXUserOptionView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HXUserOptionView.h; sourceTree = "<group>"; };
+		495C8DB4206CD377006F5DD5 /* HXUserOptionView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HXUserOptionView.m; sourceTree = "<group>"; };
 		49D282262068DE7B0020DE21 /* HXCaiPiao.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HXCaiPiao.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		49D2823E2068DE7B0020DE21 /* HXCaiPiaoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HXCaiPiaoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		49D282422068DE7B0020DE21 /* HXCaiPiaoTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HXCaiPiaoTests.m; sourceTree = "<group>"; };
@@ -62,10 +75,6 @@
 		49DDC282206A219F00CE9E5C /* HXBaseView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HXBaseView.m; sourceTree = "<group>"; };
 		49DDC284206A226E00CE9E5C /* HXBaseViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HXBaseViewController.h; sourceTree = "<group>"; };
 		49DDC285206A226E00CE9E5C /* HXBaseViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HXBaseViewController.m; sourceTree = "<group>"; };
-		49DDC287206A22C300CE9E5C /* HXBaseNavigationController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HXBaseNavigationController.h; sourceTree = "<group>"; };
-		49DDC288206A22C300CE9E5C /* HXBaseNavigationController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HXBaseNavigationController.m; sourceTree = "<group>"; };
-		49DDC28A206A230500CE9E5C /* HXBaseTabBarController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HXBaseTabBarController.h; sourceTree = "<group>"; };
-		49DDC28B206A230500CE9E5C /* HXBaseTabBarController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HXBaseTabBarController.m; sourceTree = "<group>"; };
 		49DDC28D206A29E500CE9E5C /* HXSettings.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HXSettings.pch; sourceTree = "<group>"; };
 		49DDC28E206A346300CE9E5C /* HXHomePageViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HXHomePageViewController.h; sourceTree = "<group>"; };
 		49DDC28F206A346300CE9E5C /* HXHomePageViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HXHomePageViewController.m; sourceTree = "<group>"; };
@@ -102,6 +111,76 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		492A3E88206B6A6400A8B0ED /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				492A3E89206B6A7200A8B0ED /* Home */,
+				492A3E8A206B6A7A00A8B0ED /* Headline */,
+				492A3E8B206B6A8200A8B0ED /* User */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		492A3E89206B6A7200A8B0ED /* Home */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		492A3E8A206B6A7A00A8B0ED /* Headline */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Headline;
+			sourceTree = "<group>";
+		};
+		492A3E8B206B6A8200A8B0ED /* User */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = User;
+			sourceTree = "<group>";
+		};
+		492A3E8C206B6A8D00A8B0ED /* View */ = {
+			isa = PBXGroup;
+			children = (
+				492A3E8F206B6AA000A8B0ED /* Home */,
+				492A3E8E206B6A9A00A8B0ED /* Headline */,
+				492A3E8D206B6A9600A8B0ED /* User */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		492A3E8D206B6A9600A8B0ED /* User */ = {
+			isa = PBXGroup;
+			children = (
+				495C8DA9206CC1F5006F5DD5 /* UserCenter */,
+			);
+			path = User;
+			sourceTree = "<group>";
+		};
+		492A3E8E206B6A9A00A8B0ED /* Headline */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Headline;
+			sourceTree = "<group>";
+		};
+		492A3E8F206B6AA000A8B0ED /* Home */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		492A3E93206B7CC600A8B0ED /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
 		493127972069E57B0012A992 /* Tabbar */ = {
 			isa = PBXGroup;
 			children = (
@@ -122,12 +201,25 @@
 				49DDC282206A219F00CE9E5C /* HXBaseView.m */,
 				49DDC284206A226E00CE9E5C /* HXBaseViewController.h */,
 				49DDC285206A226E00CE9E5C /* HXBaseViewController.m */,
-				49DDC287206A22C300CE9E5C /* HXBaseNavigationController.h */,
-				49DDC288206A22C300CE9E5C /* HXBaseNavigationController.m */,
-				49DDC28A206A230500CE9E5C /* HXBaseTabBarController.h */,
-				49DDC28B206A230500CE9E5C /* HXBaseTabBarController.m */,
+				492A3E82206B44E800A8B0ED /* HXNavigationController.h */,
+				492A3E83206B44E800A8B0ED /* HXNavigationController.m */,
+				492A3E85206B455300A8B0ED /* HXTabBarController.h */,
+				492A3E86206B455300A8B0ED /* HXTabBarController.m */,
 			);
 			path = BaseClasses;
+			sourceTree = "<group>";
+		};
+		495C8DA9206CC1F5006F5DD5 /* UserCenter */ = {
+			isa = PBXGroup;
+			children = (
+				495C8DAF206CC223006F5DD5 /* HXUserView.h */,
+				495C8DAE206CC223006F5DD5 /* HXUserView.m */,
+				495C8DAA206CC223006F5DD5 /* HXUserHeaderView.h */,
+				495C8DAC206CC223006F5DD5 /* HXUserHeaderView.m */,
+				495C8DB3206CD377006F5DD5 /* HXUserOptionView.h */,
+				495C8DB4206CD377006F5DD5 /* HXUserOptionView.m */,
+			);
+			path = UserCenter;
 			sourceTree = "<group>";
 		};
 		49D2821D2068DE7B0020DE21 = {
@@ -155,6 +247,9 @@
 		49D282282068DE7B0020DE21 /* HXCaiPiao */ = {
 			isa = PBXGroup;
 			children = (
+				492A3E93206B7CC600A8B0ED /* ViewModel */,
+				492A3E8C206B6A8D00A8B0ED /* View */,
+				492A3E88206B6A6400A8B0ED /* Controllers */,
 				493127982069E6830012A992 /* BaseClasses */,
 				493127972069E57B0012A992 /* Tabbar */,
 				49D2825C2068DE9B0020DE21 /* APP */,
@@ -413,15 +508,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				49DDC289206A22C300CE9E5C /* HXBaseNavigationController.m in Sources */,
-				49DDC28C206A230500CE9E5C /* HXBaseTabBarController.m in Sources */,
+				495C8DB5206CD377006F5DD5 /* HXUserOptionView.m in Sources */,
+				495C8DB0206CC223006F5DD5 /* HXUserHeaderView.m in Sources */,
+				495C8DB2206CC223006F5DD5 /* HXUserView.m in Sources */,
 				49DDC299206A365E00CE9E5C /* HXUserViewController.m in Sources */,
 				49DDC286206A226E00CE9E5C /* HXBaseViewController.m in Sources */,
+				492A3E87206B455300A8B0ED /* HXTabBarController.m in Sources */,
 				49D282632068DF000020DE21 /* AppDelegate.m in Sources */,
 				49DDC283206A219F00CE9E5C /* HXBaseView.m in Sources */,
 				49DDC290206A346300CE9E5C /* HXHomePageViewController.m in Sources */,
 				49D282692068DF090020DE21 /* main.m in Sources */,
 				49DDC296206A364800CE9E5C /* HXHeadlineNewsViewController.m in Sources */,
+				492A3E84206B44E800A8B0ED /* HXNavigationController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -574,7 +672,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.todayfu.CCCaiPiao;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -591,7 +689,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.todayfu.CCCaiPiao;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

@@ -7,7 +7,7 @@
 //
 
 #import "AppDelegate.h"
-#import "HXBaseTabBarController.h"
+#import "HXTabBarController.h"
 #import <IQKeyboardManager/IQKeyboardManager.h>
 
 @interface AppDelegate ()
@@ -22,7 +22,7 @@
     [[UIApplication sharedApplication] setStatusBarHidden:NO];
     
     self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
-    self.window.rootViewController = [[HXBaseTabBarController alloc] init];
+    self.window.rootViewController = [[HXTabBarController alloc] init];
     [self.window makeKeyAndVisible];
     
     [IQKeyboardManager sharedManager].enable = YES;

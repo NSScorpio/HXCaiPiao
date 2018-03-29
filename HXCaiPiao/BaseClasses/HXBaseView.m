@@ -13,11 +13,11 @@
 - (instancetype)initWithFrame:(CGRect)frame {
     self = [super initWithFrame:frame];
     if (self) {
-        [self buildUI];
+        [self buildForInit];
     }
     return self;
 }
-- (void)buildUI {
+- (void)buildForInit {
     self.backgroundColor = Color_BG;
 }
 

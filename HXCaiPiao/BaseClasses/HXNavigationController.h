@@ -1,8 +1,8 @@
 //
-//  HXBaseNavigationController.h
+//  HXNavigationController.h
 //  HXCaiPiao
 //
-//  Created by NSScorpio on 27/03/2018.
+//  Created by NSScorpio on 28/03/2018.
 //  Copyright © 2018 NSScorpio. All rights reserved.
 //
 
@@ -10,7 +10,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface HXBaseNavigationController : UINavigationController
+@interface HXNavigationController : UINavigationController
 
 /**
  导航栏是否透明

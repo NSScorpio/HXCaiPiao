@@ -1,22 +1,21 @@
 //
-//  HXBaseNavigationController.m
+//  HXNavigationController.m
 //  HXCaiPiao
 //
-//  Created by NSScorpio on 27/03/2018.
+//  Created by NSScorpio on 28/03/2018.
 //  Copyright © 2018 NSScorpio. All rights reserved.
 //
 
-#import "HXBaseNavigationController.h"
+#import "HXNavigationController.h"
 
-@interface HXBaseNavigationController ()
+@interface HXNavigationController ()
 
 @end
 
-@implementation HXBaseNavigationController
+@implementation HXNavigationController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
     [self buildUI];
 }
 

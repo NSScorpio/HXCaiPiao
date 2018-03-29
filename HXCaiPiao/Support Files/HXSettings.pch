@@ -19,12 +19,25 @@ blue:((float)(hexValue & 0xFF))/255.0 alpha:1.0]
 #define Color_Main Color_From_Hex(0xfc6009)  // 主色
 #define Color_BG   Color_From_Hex(0xf8f8f8)  // 视图背景色
 
+#define Color_Text_Black    Color_From_Hex(0x666666)
+#define Color_Text_Gray     Color_From_Hex(0xaaaaaa)
+#define Color_Line_Sep      Color_From_Hex(0xe6e5e4) // 下划线颜色
+
 #define Color_RGB(r,g,b)    [UIColor colorWithRed:r/255.0 green:g/255.0 blue:b/255.0 alpha:1.0f]
 #define Color_RGBA(r,g,b,a) [UIColor colorWithRed:r/255.0 green:g/255.0 blue:b/255.0 alpha:a]
+
+#pragma mark - Font
+#define Font_System(x)         [UIFont systemFontOfSize:x]
+#define Font_System_Blod(x)    [UIFont boldSystemFontOfSize:x]
+#define Font_System_20         [UIFont systemFontOfSize:20 * kScreen_Ratio]
+#define Font_System_17         [UIFont systemFontOfSize:17 * kScreen_Ratio]
+#define Font_System_15         [UIFont systemFontOfSize:15 * kScreen_Ratio]
+#define Font_System_12         [UIFont systemFontOfSize:12 * kScreen_Ratio]
 
 #pragma mark - Common
 #define kScreen_Width   [[UIScreen mainScreen] bounds].size.width
 #define kScreen_Height  [[UIScreen mainScreen] bounds].size.height
+#define kScreen_Ratio   (kScreen_Width / 375)
 
 #pragma mark - 其他
 // log
@@ -38,7 +51,7 @@ blue:((float)(hexValue & 0xFF))/255.0 alpha:1.0]
 
 #define isIphoneX     (kScreen_Height == 812.f && kScreen_Width == 375.f)
 
-#define kCommon_Margin        10.f
+#define kCommon_Margin        (10.f * kScreen_Ratio)
 #define kNavi_Height          (isIphoneX ? 88.f : 64.f)
 
 #endif /* HXSettings_pch */

@@ -1,22 +1,22 @@
 //
-//  HXBaseTabBarController.m
+//  HXTabBarController.m
 //  HXCaiPiao
 //
-//  Created by NSScorpio on 27/03/2018.
+//  Created by NSScorpio on 28/03/2018.
 //  Copyright © 2018 NSScorpio. All rights reserved.
 //
 
-#import "HXBaseTabBarController.h"
+#import "HXTabBarController.h"
 #import "HXHomePageViewController.h"
 #import "HXHeadlineNewsViewController.h"
 #import "HXUserViewController.h"
-#import "HXBaseNavigationController.h"
+#import "HXNavigationController.h"
 
-@interface HXBaseTabBarController ()
+@interface HXTabBarController ()
 
 @end
 
-@implementation HXBaseTabBarController
+@implementation HXTabBarController
 
 - (instancetype)init {
     self = [super init];
@@ -32,15 +32,15 @@
     UIGraphicsBeginImageContext(CGSizeMake(kScreen_Width, 49));
     // 首页
     HXHomePageViewController *homeVC = [[HXHomePageViewController alloc] init];
-    HXBaseNavigationController *homeNavi = [self createNaviWithViewController:homeVC title:@"首页" imageName:@"tab_home" selectedImageName:@"tab_home_select"];
+    HXNavigationController *homeNavi = [self createNaviWithViewController:homeVC title:@"首页" imageName:@"tab_home" selectedImageName:@"tab_home_select"];
     
     // 头条新闻
     HXHeadlineNewsViewController *headlineNewsVC = [[HXHeadlineNewsViewController alloc] init];
-    HXBaseNavigationController *headlineNewsNavi = [self createNaviWithViewController:headlineNewsVC title:@"头条新闻" imageName:@"tab_headline" selectedImageName:@"tab_headline_select"];
+    HXNavigationController *headlineNewsNavi = [self createNaviWithViewController:headlineNewsVC title:@"头条新闻" imageName:@"tab_headline" selectedImageName:@"tab_headline_select"];
     
     // 用户中心
     HXUserViewController *userVC = [[HXUserViewController alloc] init];
-    HXBaseNavigationController *userNavi = [self createNaviWithViewController:userVC title:@"个人中心" imageName:@"tab_user" selectedImageName:@"tab_user_select"];
+    HXNavigationController *userNavi = [self createNaviWithViewController:userVC title:@"个人中心" imageName:@"tab_user" selectedImageName:@"tab_user_select"];
     userNavi.transparent = YES;
     UIGraphicsEndImageContext();
     
@@ -54,8 +54,8 @@
     [[UITabBar appearance] setTranslucent:NO];
 }
 
-- (HXBaseNavigationController *)createNaviWithViewController:(UIViewController *)viewController title:(NSString *)title imageName:(NSString *)imageName selectedImageName:(NSString *)selectedImageName {
-    HXBaseNavigationController *navi = [[HXBaseNavigationController alloc] initWithRootViewController:viewController];
+- (HXNavigationController *)createNaviWithViewController:(UIViewController *)viewController title:(NSString *)title imageName:(NSString *)imageName selectedImageName:(NSString *)selectedImageName {
+    HXNavigationController *navi = [[HXNavigationController alloc] initWithRootViewController:viewController];
     UIImage *image = [UIImage imageNamed:imageName];
     UIImage *selectedImage = [UIImage imageNamed:selectedImageName];
     navi.tabBarItem = [[UITabBarItem alloc] initWithTitle:title image:[image imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal] selectedImage:[selectedImage imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal]];

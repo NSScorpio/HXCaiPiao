@@ -9,6 +9,7 @@
 //  视图基类, 应用中创建的所有视图类继承此类
 
 #import <UIKit/UIKit.h>
+#import <Masonry/Masonry.h>
 
 @interface HXBaseView : UIView
 
