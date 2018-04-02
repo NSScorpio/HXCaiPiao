@@ -21,16 +21,4 @@
     self.backgroundColor = Color_BG;
 }
 
-#pragma mark - KVO
-
-#pragma mark - Public
-
-#pragma mark - Private
-
-#pragma mark - Delegate
-
-#pragma mark - Setter
-
-#pragma mark - Getter
-
 @end
