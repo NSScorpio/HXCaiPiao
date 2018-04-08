@@ -141,7 +141,7 @@ static NSString *const kHXTableViewCellReuseIdentifier = @"HXTableViewCellReuseI
     return self.viewModel.cell;
 }
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    self.viewModel.selectIndexPath = indexPath;
+    self.viewModel.cellSelectIndexPath = indexPath;
 }
 
 #pragma mark - Setter
@@ -164,6 +164,5 @@ static NSString *const kHXTableViewCellReuseIdentifier = @"HXTableViewCellReuseI
     }
     return _viewModel;
 }
-
 
 @end

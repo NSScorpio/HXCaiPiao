@@ -39,6 +39,8 @@ blue:((float)(hexValue & 0xFF))/255.0 alpha:1.0]
 #define kScreen_Height  [[UIScreen mainScreen] bounds].size.height
 #define kScreen_Ratio   (kScreen_Width / 375)
 
+#define kAnimation_Duration    0.25f
+
 #pragma mark - 其他
 // log
 #ifdef DEBUG

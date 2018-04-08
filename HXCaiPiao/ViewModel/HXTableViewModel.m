@@ -21,6 +21,9 @@
 - (void)buildDefaultValue {
     self.dataSourceArray = @[].mutableCopy;
     
+    self.closeRefresh = NO;
+    self.autoRefresh = YES;
+    
     self.backgroundColor = [UIColor whiteColor];
     self.cellBackgroundColor = [UIColor whiteColor];
     

@@ -9,8 +9,12 @@
 /* Begin PBXBuildFile section */
 		492A3E84206B44E800A8B0ED /* HXNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 492A3E83206B44E800A8B0ED /* HXNavigationController.m */; };
 		492A3E87206B455300A8B0ED /* HXTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 492A3E86206B455300A8B0ED /* HXTabBarController.m */; };
+		492C38802073593A007DCE67 /* HXTableViewDataStore.m in Sources */ = {isa = PBXBuildFile; fileRef = 492C387F2073593A007DCE67 /* HXTableViewDataStore.m */; };
 		492E3CF82071D32300775592 /* HXTableViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 492E3CF72071D32300775592 /* HXTableViewModel.m */; };
 		492E3CFB207201A400775592 /* HXTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 492E3CFA207201A400775592 /* HXTableView.m */; };
+		492E3CFF2072122100775592 /* HXUserTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 492E3CFE2072122100775592 /* HXUserTableView.m */; };
+		492E3D022072154200775592 /* HXUserTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 492E3D012072154200775592 /* HXUserTableViewCell.m */; };
+		4930D91E2079FD1E000518FF /* UIView+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 4930D91D2079FD1E000518FF /* UIView+Extension.m */; };
 		495C8DB0206CC223006F5DD5 /* HXUserHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 495C8DAC206CC223006F5DD5 /* HXUserHeaderView.m */; };
 		495C8DB2206CC223006F5DD5 /* HXUserView.m in Sources */ = {isa = PBXBuildFile; fileRef = 495C8DAE206CC223006F5DD5 /* HXUserView.m */; };
 		495C8DB5206CD377006F5DD5 /* HXUserOptionView.m in Sources */ = {isa = PBXBuildFile; fileRef = 495C8DB4206CD377006F5DD5 /* HXUserOptionView.m */; };
@@ -53,10 +57,18 @@
 		492A3E83206B44E800A8B0ED /* HXNavigationController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HXNavigationController.m; sourceTree = "<group>"; };
 		492A3E85206B455300A8B0ED /* HXTabBarController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HXTabBarController.h; sourceTree = "<group>"; };
 		492A3E86206B455300A8B0ED /* HXTabBarController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HXTabBarController.m; sourceTree = "<group>"; };
+		492C387E2073593A007DCE67 /* HXTableViewDataStore.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HXTableViewDataStore.h; sourceTree = "<group>"; };
+		492C387F2073593A007DCE67 /* HXTableViewDataStore.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HXTableViewDataStore.m; sourceTree = "<group>"; };
 		492E3CF62071D32300775592 /* HXTableViewModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HXTableViewModel.h; sourceTree = "<group>"; };
 		492E3CF72071D32300775592 /* HXTableViewModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HXTableViewModel.m; sourceTree = "<group>"; };
 		492E3CF9207201A400775592 /* HXTableView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HXTableView.h; sourceTree = "<group>"; };
 		492E3CFA207201A400775592 /* HXTableView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HXTableView.m; sourceTree = "<group>"; };
+		492E3CFD2072122100775592 /* HXUserTableView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HXUserTableView.h; sourceTree = "<group>"; };
+		492E3CFE2072122100775592 /* HXUserTableView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HXUserTableView.m; sourceTree = "<group>"; };
+		492E3D002072154200775592 /* HXUserTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HXUserTableViewCell.h; sourceTree = "<group>"; };
+		492E3D012072154200775592 /* HXUserTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HXUserTableViewCell.m; sourceTree = "<group>"; };
+		4930D91C2079FD1E000518FF /* UIView+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Extension.h"; sourceTree = "<group>"; };
+		4930D91D2079FD1E000518FF /* UIView+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Extension.m"; sourceTree = "<group>"; };
 		495C8DAA206CC223006F5DD5 /* HXUserHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HXUserHeaderView.h; sourceTree = "<group>"; };
 		495C8DAC206CC223006F5DD5 /* HXUserHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HXUserHeaderView.m; sourceTree = "<group>"; };
 		495C8DAE206CC223006F5DD5 /* HXUserView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HXUserView.m; sourceTree = "<group>"; };
@@ -189,6 +201,35 @@
 			path = ViewModel;
 			sourceTree = "<group>";
 		};
+		492E3CFC2072103200775592 /* TableView */ = {
+			isa = PBXGroup;
+			children = (
+				492E3CFD2072122100775592 /* HXUserTableView.h */,
+				492E3CFE2072122100775592 /* HXUserTableView.m */,
+				492E3D002072154200775592 /* HXUserTableViewCell.h */,
+				492E3D012072154200775592 /* HXUserTableViewCell.m */,
+			);
+			path = TableView;
+			sourceTree = "<group>";
+		};
+		492E3D03207221BC00775592 /* Store */ = {
+			isa = PBXGroup;
+			children = (
+				492C387E2073593A007DCE67 /* HXTableViewDataStore.h */,
+				492C387F2073593A007DCE67 /* HXTableViewDataStore.m */,
+			);
+			path = Store;
+			sourceTree = "<group>";
+		};
+		4930D91B2079FCF9000518FF /* Tool */ = {
+			isa = PBXGroup;
+			children = (
+				4930D91C2079FD1E000518FF /* UIView+Extension.h */,
+				4930D91D2079FD1E000518FF /* UIView+Extension.m */,
+			);
+			path = Tool;
+			sourceTree = "<group>";
+		};
 		493127972069E57B0012A992 /* Tabbar */ = {
 			isa = PBXGroup;
 			children = (
@@ -222,6 +263,7 @@
 		495C8DA9206CC1F5006F5DD5 /* UserCenter */ = {
 			isa = PBXGroup;
 			children = (
+				492E3CFC2072103200775592 /* TableView */,
 				495C8DAF206CC223006F5DD5 /* HXUserView.h */,
 				495C8DAE206CC223006F5DD5 /* HXUserView.m */,
 				495C8DAA206CC223006F5DD5 /* HXUserHeaderView.h */,
@@ -257,6 +299,8 @@
 		49D282282068DE7B0020DE21 /* HXCaiPiao */ = {
 			isa = PBXGroup;
 			children = (
+				4930D91B2079FCF9000518FF /* Tool */,
+				492E3D03207221BC00775592 /* Store */,
 				492A3E93206B7CC600A8B0ED /* ViewModel */,
 				492A3E8C206B6A8D00A8B0ED /* View */,
 				492A3E88206B6A6400A8B0ED /* Controllers */,
@@ -518,15 +562,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4930D91E2079FD1E000518FF /* UIView+Extension.m in Sources */,
 				495C8DB5206CD377006F5DD5 /* HXUserOptionView.m in Sources */,
 				495C8DB0206CC223006F5DD5 /* HXUserHeaderView.m in Sources */,
+				492E3D022072154200775592 /* HXUserTableViewCell.m in Sources */,
 				495C8DB2206CC223006F5DD5 /* HXUserView.m in Sources */,
 				49DDC299206A365E00CE9E5C /* HXUserViewController.m in Sources */,
 				49DDC286206A226E00CE9E5C /* HXBaseViewController.m in Sources */,
 				492A3E87206B455300A8B0ED /* HXTabBarController.m in Sources */,
 				49D282632068DF000020DE21 /* AppDelegate.m in Sources */,
+				492E3CFF2072122100775592 /* HXUserTableView.m in Sources */,
 				492E3CFB207201A400775592 /* HXTableView.m in Sources */,
 				49DDC283206A219F00CE9E5C /* HXBaseView.m in Sources */,
+				492C38802073593A007DCE67 /* HXTableViewDataStore.m in Sources */,
 				49DDC290206A346300CE9E5C /* HXHomePageViewController.m in Sources */,
 				49D282692068DF090020DE21 /* main.m in Sources */,
 				492E3CF82071D32300775592 /* HXTableViewModel.m in Sources */,

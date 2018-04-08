@@ -42,7 +42,9 @@ typedef NS_ENUM(NSUInteger, HXTableViewRequestStatus) {
 @property (nonatomic, strong) NSIndexPath *cellHeightIndexPath;
 @property (nonatomic, assign) CGFloat cellHeight;
 
-@property (nonatomic, strong) NSIndexPath *selectIndexPath;
+@property (nonatomic, strong) NSIndexPath *cellSelectIndexPath; // tableView didSelect方法中的indexPath
+
+@property (nonatomic, strong) NSIndexPath *cellDelegateEventIndexPath; // cell点击事件所在的indexPath
 
 #pragma mark - Status
 @property (nonatomic, assign) HXTableViewRequestStatus requestStatus;       // 请求状态

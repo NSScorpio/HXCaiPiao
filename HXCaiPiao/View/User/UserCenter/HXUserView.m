@@ -98,6 +98,7 @@
 - (HXUserOptionView *)optionView {
     if (!_optionView) {
         _optionView = [[HXUserOptionView alloc] init];
+        _optionView.backgroundColor = Color_BG;
         _optionView.delegate = self;
     }
     return _optionView;
