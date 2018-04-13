@@ -12,11 +12,14 @@
 NSString *const HXTableViewIdleDataSourceDictionaryTitleKey = @"HXTableViewIdleDataSourceDictionaryTitleKey";
 NSString *const HXTableViewIdleDataSourceDictionaryOptionTitlesKey = @"HXTableViewIdleDataSourceDictionaryOptionTitlesKey";
 NSString *const HXTableViewIdleDataSourceDictionaryOptionImagesKey = @"HXTableViewIdleDataSourceDictionaryOptionImagesKey";
+NSString *const HXTableViewIdleDataSourceDictionaryOptionIsShowKey = @"HXTableViewIdleDataSourceDictionaryOptionIsShowKey";
 
 @interface HXUserTableView () <HXUserTableViewCellDelegate>
 
 @property (nonatomic, strong) NSIndexPath *optionIndexPath; // section: cell所在行, row: option位置
 @property (nonatomic, assign) HXUserTableViewEventType type;
+
+@property (nonatomic, strong) NSMutableSet *showIndexPaths;
 
 @end
 
@@ -38,13 +41,20 @@ NSString *const HXTableViewIdleDataSourceDictionaryOptionImagesKey = @"HXTableVi
         cell = [[HXUserTableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:self.viewModel.cellReuseIdentifier];
         cell.backgroundColor = [UIColor clearColor];
         cell.selectionStyle = UITableViewCellSelectionStyleNone;
-        cell.contentView.backgroundColor = self.viewModel.cellBackgroundColor;
+        cell.contentView.backgroundColor = Color_BG;
         cell.delegate = self;
     }
     
     NSDictionary *dataSource = self.viewModel.dataSourceArray[self.viewModel.cellIndexPath.row];
     NSString *title = dataSource[HXTableViewIdleDataSourceDictionaryTitleKey];
     [cell updateHeaderTitleWithTitle:title];
+    
+    NSNumber *isShow = dataSource[HXTableViewIdleDataSourceDictionaryOptionIsShowKey];
+    if (isShow.boolValue) {
+        [self.showIndexPaths addObject:self.viewModel.cellIndexPath];
+    } else {
+        [self.showIndexPaths removeObject:self.viewModel.cellIndexPath];
+    }
     
     NSArray *titlesArr = dataSource[HXTableViewIdleDataSourceDictionaryOptionTitlesKey];
     NSArray *imagesArr = dataSource[HXTableViewIdleDataSourceDictionaryOptionImagesKey];
@@ -53,9 +63,9 @@ NSString *const HXTableViewIdleDataSourceDictionaryOptionImagesKey = @"HXTableVi
     self.viewModel.cell = cell;
 }
 - (void)configCellHeight {
-    self.viewModel.cellHeight = 0.26 * kScreen_Width + kCommon_Margin;
-    
-    // 0.26   0.1 0.16
+    // 0.26   0.1 0.16    
+//    self.viewModel.cellHeight =  0.26 * kScreen_Width + kCommon_Margin;
+    self.viewModel.cellHeight = [self.showIndexPaths containsObject:self.viewModel.cellHeightIndexPath] ? 0.26 * kScreen_Width + kCommon_Margin : 0.1 * kScreen_Width;
 }
 
 #pragma mark - Public
@@ -70,6 +80,27 @@ NSString *const HXTableViewIdleDataSourceDictionaryOptionImagesKey = @"HXTableVi
                 break;
         }
     }
+}
+- (void)cellShowOptionsViewAtIndexPath:(NSIndexPath *)indexPath {
+    if (!indexPath) {
+        return;
+    }
+    
+    [self.viewModel.tableView beginUpdates];
+    HXUserTableViewCell *cell = [self.viewModel.tableView cellForRowAtIndexPath:indexPath];
+    [cell showOptionsView];
+    [self.showIndexPaths addObject:indexPath];
+    [self.viewModel.tableView endUpdates];
+}
+- (void)cellHideOptionsViewAtIndexPath:(NSIndexPath *)indexPath {
+    if (!indexPath) {
+        return;
+    }
+    [self.viewModel.tableView beginUpdates];
+    HXUserTableViewCell *cell = [self.viewModel.tableView cellForRowAtIndexPath:indexPath];
+    [cell hideOptionsView];
+    [self.showIndexPaths removeObject:indexPath];
+    [self.viewModel.tableView endUpdates];
 }
 
 #pragma mark - Private
@@ -99,5 +130,11 @@ NSString *const HXTableViewIdleDataSourceDictionaryOptionImagesKey = @"HXTableVi
 #pragma mark - Setter
 
 #pragma mark - Getter
+- (NSMutableSet *)showIndexPaths {
+    if (!_showIndexPaths) {
+        _showIndexPaths = [[NSMutableSet alloc] init];
+    }
+    return _showIndexPaths;
+}
 
 @end

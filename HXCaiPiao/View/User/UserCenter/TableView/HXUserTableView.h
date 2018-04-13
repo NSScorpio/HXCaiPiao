@@ -18,11 +18,15 @@ typedef NS_ENUM(NSUInteger, HXUserTableViewEventType) {
 extern NSString *const HXTableViewIdleDataSourceDictionaryTitleKey;
 extern NSString *const HXTableViewIdleDataSourceDictionaryOptionTitlesKey;
 extern NSString *const HXTableViewIdleDataSourceDictionaryOptionImagesKey;
+extern NSString *const HXTableViewIdleDataSourceDictionaryOptionIsShowKey;
 
 @interface HXUserTableView : HXTableView
 
 - (void)configCell;
 - (void)configCellHeight;
+
+- (void)cellShowOptionsViewAtIndexPath:(NSIndexPath *)indexPath;
+- (void)cellHideOptionsViewAtIndexPath:(NSIndexPath *)indexPath;
 
 - (void)eventHandler:(void (^)(HXUserTableViewEventType type, NSIndexPath *indexPath))handler;
 

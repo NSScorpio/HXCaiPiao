@@ -23,9 +23,10 @@
 
 @property (nonatomic, weak) id<HXUserTableViewCellDelegate> delegate;
 
-//@property (nonatomic, strong) NSIndexPath *indexPath;
-
 - (void)updateHeaderTitleWithTitle:(NSString *)title;
 - (void)updateOptionsWithTitles:(NSArray<NSString *> *)titles images:(NSArray<UIImage *> *)images;
+
+- (void)showOptionsView;
+- (void)hideOptionsView;
 
 @end

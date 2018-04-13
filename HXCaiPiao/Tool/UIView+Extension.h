@@ -5,10 +5,6 @@
 
 #import <UIKit/UIKit.h>
 
-#define ScrW [UIScreen mainScreen].bounds.size.width
-#define ScrH [UIScreen mainScreen].bounds.size.height
-
-
 @interface UIView (Extension)
 
 /** UIView 的坐标X点 */

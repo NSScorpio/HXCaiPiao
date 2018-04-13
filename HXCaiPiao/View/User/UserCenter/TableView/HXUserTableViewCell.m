@@ -21,6 +21,8 @@ static const NSUInteger kOptionBtnBaseTag = 200;
 @property (nonatomic, copy) NSArray<NSString *> *titles;
 @property (nonatomic, copy) NSArray<UIImage *> *images;
 
+@property (nonatomic, assign, getter=isShowOption) BOOL showOption;
+
 @end
 
 @implementation HXUserTableViewCell
@@ -32,7 +34,7 @@ static const NSUInteger kOptionBtnBaseTag = 200;
     }
     return self;
 }
-- (void)buildUI {
+- (void)buildUI {    
     [self.contentView addSubview:self.headerBtn];
     [self.contentView addSubview:self.optionsScrollView];
     [self.contentView addSubview:self.sepLine];
@@ -49,8 +51,11 @@ static const NSUInteger kOptionBtnBaseTag = 200;
     }];
     [self.optionsScrollView mas_makeConstraints:^(MASConstraintMaker *make) {
         make.top.equalTo(self.headerBtn.mas_bottom);
-        make.left.right.bottom.equalTo(self.contentView);
+        make.left.right.equalTo(self.contentView);
+        make.height.equalTo(@(kScreen_Width * 0.16 + kCommon_Margin));
     }];
+    
+    _showOption = YES;
 }
 - (void)layoutSubviews {
     [super layoutSubviews];
@@ -62,19 +67,18 @@ static const NSUInteger kOptionBtnBaseTag = 200;
     CGFloat spacing = self.headerBtn.frame.size.width - imageSize.width - titleSize.width;
     self.headerBtn.titleEdgeInsets = UIEdgeInsetsMake(0.0, - imageSize.width, 0.0, imageSize.width + spacing);
     self.headerBtn.imageEdgeInsets = UIEdgeInsetsMake(0.0, titleSize.width + spacing - kCommon_Margin * 2, 0.0, - titleSize.width);
-        
-    for (NSInteger i = 0; i < self.optionsScrollView.subviews.count; i++) {
-        id btn = self.optionsScrollView.subviews[i];
-        if (![btn isKindOfClass:[UIButton class]]) {
-            break;
-        }
-        UIButton *button = (UIButton *)btn;
+    
+    [self configButtonsInOptionScrollView:^(UIButton *button, NSUInteger index) {
+        button.frame = CGRectMake(index * (kScreen_Width / 4),
+                                  self.isShowOption ? 0 : - self.optionsScrollView.height - kCommon_Margin / 3,
+                                  kScreen_Width / 4,
+                                  self.optionsScrollView.height - kCommon_Margin / 3);
         CGSize imageSize = button.imageView.size;
         CGSize titleSize = button.titleLabel.size;
         button.titleEdgeInsets = UIEdgeInsetsMake(0.0, - imageSize.width, - (imageSize.height + kCommon_Margin/3), 0.0);
         titleSize = button.titleLabel.size;
         button.imageEdgeInsets = UIEdgeInsetsMake(- (titleSize.height + kCommon_Margin/3), 0.0, 0.0, - titleSize.width);
-    }
+    }];
     
     self.optionsScrollView.contentSize = CGSizeMake(kScreen_Width / 4 * self.titles.count, self.optionsScrollView.height);
 }
@@ -92,7 +96,6 @@ static const NSUInteger kOptionBtnBaseTag = 200;
         return;
     }
     
-    UIButton *tmpBtn = nil;
     for (NSUInteger i = 0; i < titles.count; i++) {
         UIButton *btn = [UIButton buttonWithType:UIButtonTypeCustom];
         [btn addTarget:self action:@selector(clickOptionBtn:) forControlEvents:UIControlEventTouchUpInside];
@@ -102,19 +105,7 @@ static const NSUInteger kOptionBtnBaseTag = 200;
         [btn setImage:images[i] forState:UIControlStateNormal];
         btn.titleLabel.font = Font_System_12;
         btn.tag = i + kOptionBtnBaseTag;
-        btn.frame = CGRectMake(i * (kScreen_Width / 4), 0, kScreen_Width / 4, 200);
         [self.optionsScrollView addSubview:btn];
-        [btn mas_makeConstraints:^(MASConstraintMaker *make) {
-            if (0 == i) {
-                make.left.equalTo(self.optionsScrollView);
-            } else {
-                make.left.equalTo(tmpBtn.mas_right);
-            }
-            make.top.equalTo(self.optionsScrollView);
-            make.bottom.equalTo(self).with.offset(- kCommon_Margin / 3);
-            make.width.equalTo(@(kScreen_Width / 4));
-        }];
-        tmpBtn = btn;
     }
     
     self.titles = [titles copy];
@@ -122,10 +113,29 @@ static const NSUInteger kOptionBtnBaseTag = 200;
     [self layoutIfNeeded];
 }
 
+- (void)showOptionsView {
+    self.showOption = YES;
+    [UIView animateWithDuration:kAnimation_Duration animations:^{
+        [self configButtonsInOptionScrollView:^(UIButton *button, NSUInteger index) {
+            button.top = 0;
+        }];
+        _optionsScrollView.alpha = 1.f;
+    }];
+}
+- (void)hideOptionsView {
+    self.showOption = NO;
+    [UIView animateWithDuration:kAnimation_Duration animations:^{
+        [self configButtonsInOptionScrollView:^(UIButton *button, NSUInteger index) {
+            button.top = - button.height;
+        }];
+        _optionsScrollView.alpha = 0.f;
+    }];
+}
+
 #pragma mark - Private
 - (void)clickHeaderBtn:(UIButton *)btn {
     [UIView animateWithDuration:kAnimation_Duration animations:^{
-        self.headerBtn.imageView.transform = CGAffineTransformRotate(self.headerBtn.imageView.transform, M_PI);
+        _headerBtn.imageView.transform = CGAffineTransformRotate(_headerBtn.imageView.transform, M_PI);
     }];
     
     if ([self.delegate respondsToSelector:@selector(cellDidSelectHeader:)]) {
@@ -135,6 +145,17 @@ static const NSUInteger kOptionBtnBaseTag = 200;
 - (void)clickOptionBtn:(UIButton *)btn {
     if ([self.delegate respondsToSelector:@selector(cell:didSelectOptionAtIndex:)]) {
         [self.delegate cell:self didSelectOptionAtIndex:btn.tag - kOptionBtnBaseTag];
+    }
+}
+
+- (void)configButtonsInOptionScrollView:(void (^)(UIButton *button, NSUInteger index))block {
+    for (NSUInteger i = 0; i < self.optionsScrollView.subviews.count; i++) {
+        id btn = self.optionsScrollView.subviews[i];
+        if (![btn isMemberOfClass:[UIButton class]]) {
+            continue;
+        }
+        UIButton *button = (UIButton *)btn;
+        if (block) block(button, i);
     }
 }
 

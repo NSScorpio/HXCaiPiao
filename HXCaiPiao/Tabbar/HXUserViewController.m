@@ -15,8 +15,6 @@
 @property (nonatomic, strong) HXUserView *userView;
 @property (nonatomic, strong) HXUserTableView *tableView;
 
-
-
 @end
 
 @implementation HXUserViewController
@@ -51,34 +49,39 @@
     [self addKVO];
     
     _tableView.viewModel.dataSourceArray = @[@{HXTableViewIdleDataSourceDictionaryTitleKey : @"个人信息",
+                                               HXTableViewIdleDataSourceDictionaryOptionIsShowKey : @(YES),
                                                HXTableViewIdleDataSourceDictionaryOptionTitlesKey : @[@"个人资料", @"购彩战绩", @"会员中心",@"个人资料", @"购彩战绩", @"会员中心"],
                                                HXTableViewIdleDataSourceDictionaryOptionImagesKey : @[[UIImage imageNamed:@"user_tboption_userinfo"],
                                                                                                       [UIImage imageNamed:@"user_tboption_record"],
                                                                                                       [UIImage imageNamed:@"user_tboption_memberCenter"],
                                                                                                       [UIImage imageNamed:@"user_tboption_userinfo"],
                                                                                                       [UIImage imageNamed:@"user_tboption_record"],
-                                                                                                      [UIImage imageNamed:@"user_tboption_memberCenter"]]},
+                                                                                                      [UIImage imageNamed:@"user_tboption_memberCenter"]]}.mutableCopy,
                                              @{HXTableViewIdleDataSourceDictionaryTitleKey : @"现金交易",
+                                               HXTableViewIdleDataSourceDictionaryOptionIsShowKey : @(YES),
                                                HXTableViewIdleDataSourceDictionaryOptionTitlesKey : @[@"购彩记录", @"追号记录", @"账户明细", @"奖金增值"],
                                                HXTableViewIdleDataSourceDictionaryOptionImagesKey : @[[UIImage imageNamed:@"user_tboption_cashBuyHistory_red"],
                                                                                                       [UIImage imageNamed:@"user_tboption_cashTrackHistory_red"],
                                                                                                       [UIImage imageNamed:@"user_tboption_cashAcount_red"],
-                                                                                                      [UIImage imageNamed:@"user_tboption_bonusIncrease"]]},
+                                                                                                      [UIImage imageNamed:@"user_tboption_bonusIncrease"]]}.mutableCopy,
                                              @{HXTableViewIdleDataSourceDictionaryTitleKey : @"乐透交易",
+                                               HXTableViewIdleDataSourceDictionaryOptionIsShowKey : @(YES),
                                                HXTableViewIdleDataSourceDictionaryOptionTitlesKey : @[@"购彩记录", @"追号记录", @"账户明细"],
                                                HXTableViewIdleDataSourceDictionaryOptionImagesKey : @[[UIImage imageNamed:@"user_tboption_goldBuyHistory"],
                                                                                                       [UIImage imageNamed:@"user_tboption_goldTrackHistory"],
-                                                                                                      [UIImage imageNamed:@"user_tboption_goldAcount"]]},
+                                                                                                      [UIImage imageNamed:@"user_tboption_goldAcount"]]}.mutableCopy,
                                              @{HXTableViewIdleDataSourceDictionaryTitleKey : @"华西特色",
+                                               HXTableViewIdleDataSourceDictionaryOptionIsShowKey : @(YES),
                                                HXTableViewIdleDataSourceDictionaryOptionTitlesKey : @[@"华西荐单", @"单场竞猜", @"天天送8元"],
                                                HXTableViewIdleDataSourceDictionaryOptionImagesKey : @[[UIImage imageNamed:@"user_tboption_hxjd"],
                                                                                                       [UIImage imageNamed:@"user_tboption_singleMatchQuiz"],
-                                                                                                      [UIImage imageNamed:@"user_tboption_sendEight"]]},
+                                                                                                      [UIImage imageNamed:@"user_tboption_sendEight"]]}.mutableCopy,
                                              @{HXTableViewIdleDataSourceDictionaryTitleKey : @"我的客服",
+                                               HXTableViewIdleDataSourceDictionaryOptionIsShowKey : @(YES),
                                                HXTableViewIdleDataSourceDictionaryOptionTitlesKey : @[@"客服热线", @"在线客服", @"帮助中心"],
                                                HXTableViewIdleDataSourceDictionaryOptionImagesKey : @[[UIImage imageNamed:@"user_tboption_telNum"],
                                                                                                       [UIImage imageNamed:@"user_tboption_onlineService"],
-                                                                                                      [UIImage imageNamed:@"user_tboption_helpCenter"]]}].mutableCopy;
+                                                                                                      [UIImage imageNamed:@"user_tboption_helpCenter"]]}.mutableCopy].mutableCopy;
     
     _tableView.viewModel.requestStatus = HXTableViewRequestStatusRefreshSuccess;
 }
@@ -116,8 +119,16 @@
         [self.tableView eventHandler:^(HXUserTableViewEventType type, NSIndexPath *indexPath) {
             switch (type) {
                 case HXUserTableViewEventTypeFlex: {
-                    NSDictionary *dict = self.tableView.viewModel.dataSourceArray[indexPath.row];
-                    HXLog(@"Header Title : %@", dict[HXTableViewIdleDataSourceDictionaryTitleKey]);
+                    NSMutableDictionary *dict = self.tableView.viewModel.dataSourceArray[indexPath.row];
+                    HXLog(@"Header Title : %@, isShow : %@", dict[HXTableViewIdleDataSourceDictionaryTitleKey], dict[HXTableViewIdleDataSourceDictionaryOptionIsShowKey]);
+                    NSNumber *isShow = dict[HXTableViewIdleDataSourceDictionaryOptionIsShowKey];
+                    if (isShow.boolValue) {
+                        [self.tableView cellHideOptionsViewAtIndexPath:indexPath];
+                    } else {
+                        [self.tableView cellShowOptionsViewAtIndexPath:indexPath];
+                    }
+                    dict[HXTableViewIdleDataSourceDictionaryOptionIsShowKey] = @(!isShow.boolValue);
+                    [self.tableView.viewModel.dataSourceArray replaceObjectAtIndex:indexPath.row withObject:dict];
                 }
                     break;
                 case HXUserTableViewEventTypeOption: {
@@ -144,7 +155,7 @@
     HXLog(@"User Name");
 }
 - (void)userOptionViewDidSelectedOptionAtIndex:(NSUInteger)index {
-    HXLog(@"Option index : %ld", index);
+    HXLog(@"Option index : %ld", (unsigned long)index);
 }
 
 #pragma mark - Getter
