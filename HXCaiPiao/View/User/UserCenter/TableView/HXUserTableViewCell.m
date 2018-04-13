@@ -45,8 +45,8 @@ static const NSUInteger kOptionBtnBaseTag = 200;
         make.height.equalTo(@(kScreen_Width * 0.1));
     }];
     [self.sepLine mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.top.equalTo(self.headerBtn.mas_bottom);
         make.left.right.equalTo(self.headerBtn);
+        make.bottom.equalTo(self.headerBtn);
         make.height.equalTo(@0.5);
     }];
     [self.optionsScrollView mas_makeConstraints:^(MASConstraintMaker *make) {
